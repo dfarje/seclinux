@@ -1,4 +1,4 @@
-baseURL: "https://dfarje.github.io/seclinux/"
+baseURL: "https://seclinux.net"
 languageCode: en-us
-title: My New Hugo Site
+title: SecLinux Blog
 theme: terminal
