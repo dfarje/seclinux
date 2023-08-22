@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SecLinux Blog</title>
+    <link>https://seclinux.net/</link>
+    <description>Recent content on SecLinux Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Aug 2023 22:41:54 -0400</lastBuildDate><atom:link href="https://seclinux.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Firstpost</title>
+      <link>https://seclinux.net/posts/firstpost/</link>
+      <pubDate>Mon, 21 Aug 2023 22:41:54 -0400</pubDate>
+      
+      <guid>https://seclinux.net/posts/firstpost/</guid>
+      <description>This is my first post. The reason I&amp;rsquo;m posting this is to test my deployment on github. will likely delete this.</description>
+      <content>&lt;p&gt;This is my first post.
+The reason I&amp;rsquo;m posting this is to test my deployment on github.
+will likely delete this.&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Test</title>
+      <link>https://seclinux.net/docs/test/</link>
+      <pubDate>Mon, 21 Aug 2023 22:04:25 -0400</pubDate>
+      
+      <guid>https://seclinux.net/docs/test/</guid>
+      <description>This is a test page this is a test page</description>
+      <content>&lt;h3 id=&#34;this-is-a-test-page&#34;&gt;This is a test page&lt;/h3&gt;
+&lt;p&gt;this is a test page&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
