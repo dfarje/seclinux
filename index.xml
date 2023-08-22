@@ -6,37 +6,23 @@
     <description>Recent content on SecLinux Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Aug 2023 23:12:04 -0400</lastBuildDate><atom:link href="https://seclinux.net/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Thirdpost</title>
-      <link>https://seclinux.net/posts/thirdpost/</link>
-      <pubDate>Mon, 21 Aug 2023 23:12:04 -0400</pubDate>
-      
-      <guid>https://seclinux.net/posts/thirdpost/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>Secondpost</title>
-      <link>https://seclinux.net/posts/secondpost/</link>
-      <pubDate>Mon, 21 Aug 2023 22:45:15 -0400</pubDate>
-      
-      <guid>https://seclinux.net/posts/secondpost/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
+    <lastBuildDate>Mon, 21 Aug 2023 22:41:54 -0400</lastBuildDate><atom:link href="https://seclinux.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Firstpost</title>
       <link>https://seclinux.net/posts/firstpost/</link>
       <pubDate>Mon, 21 Aug 2023 22:41:54 -0400</pubDate>
       
       <guid>https://seclinux.net/posts/firstpost/</guid>
-      <description>This is my first post. The reason I&amp;rsquo;m posting this is to test my deployment on github. will likely delete this.</description>
-      <content>&lt;p&gt;This is my first post.
-The reason I&amp;rsquo;m posting this is to test my deployment on github.
-will likely delete this.&lt;/p&gt;
+      <description>This is my first post. I decided to start this blog as a way to publish the technical notes that I write down in markdown. I work as a network and cybersecurity engineer with a background in coding. I spent many years running networks and datacenters, due to this I have accumulated lots of knowledge in Linux Systems Administration and networks. The blog will also contain my general opinion on various topics.</description>
+      <content>&lt;p&gt;This is my first post.  I decided to start this blog as a way to publish the technical notes that I write down in markdown.  I work as a network and cybersecurity engineer with a background in coding.  I spent many years running networks and datacenters, due to this I have accumulated lots of knowledge in Linux Systems Administration and networks.  The blog will also contain my general opinion on various topics.  It is however, mostly a covering the following topics.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Computer Science&lt;/li&gt;
+&lt;li&gt;Computer Networks&lt;/li&gt;
+&lt;li&gt;Programming&lt;/li&gt;
+&lt;li&gt;MIS/DevOps&lt;/li&gt;
+&lt;li&gt;CyberSecurity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It is my hope to contribute some literature in these topics and it is my ultimate hope that these articles will help others out there who want to learn about these topics.&lt;/p&gt;
 </content>
     </item>
     

@@ -6,27 +6,7 @@
     <description>Recent content in Tags on SecLinux Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Aug 2023 23:12:04 -0400</lastBuildDate><atom:link href="https://seclinux.net/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>moretest</title>
-      <link>https://seclinux.net/tags/moretest/</link>
-      <pubDate>Mon, 21 Aug 2023 23:12:04 -0400</pubDate>
-      
-      <guid>https://seclinux.net/tags/moretest/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>thirdpost</title>
-      <link>https://seclinux.net/tags/thirdpost/</link>
-      <pubDate>Mon, 21 Aug 2023 23:12:04 -0400</pubDate>
-      
-      <guid>https://seclinux.net/tags/thirdpost/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
+    <lastBuildDate>Mon, 21 Aug 2023 22:41:54 -0400</lastBuildDate><atom:link href="https://seclinux.net/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>first</title>
       <link>https://seclinux.net/tags/first/</link>
