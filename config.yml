@@ -2,3 +2,7 @@ baseURL: "https://seclinux.net"
 languageCode: en-us
 title: SecLinux Blog
 theme: terminal
+
+params:
+  themeColor: red
+
