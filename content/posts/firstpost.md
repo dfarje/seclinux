@@ -13,12 +13,17 @@ hideComments = false
 color = "red" #color from the theme settings
 +++
 
-This is my first post.  I decided to start this blog as a way to publish the technical notes that I write down in markdown.  I work as a network and cybersecurity engineer with a background in coding.  I spent many years running networks and datacenters, due to this I have accumulated lots of knowledge in Linux Systems Administration and networks.  The blog will also contain my general opinion on various topics.  It is however, mostly a covering the following topics.
+This is my first post.  I decided to start this blog as a way to publish the technical notes that I write down in markdown, I believe in open and simple text formats as a way to generate content that has more resilience against bitrot. I will be using hugo to compile the notes into HTML. 
 
+I work as a network and cybersecurity engineer with a background in coding.  I spent many years running/automating networks and datacenters, due to this I have accumulated lots of knowledge in Linux Systems Administration and networks (all kinds of network gear).  The blog will also contain observations on various industry topics.  I will mostly be covering the following:
+
+- FOSS 
 - Computer Science
-- Computer Networks
-- Programming
+- IP Networking
+- Software Development
 - MIS/DevOps
 - CyberSecurity
+- Retro Computing
+- Misc
 
-It is my hope to contribute some literature in these topics and it is my ultimate hope that these articles will help others out there who want to learn about these topics.
+I'm mostly writing this blog to document my own learning process.  In the past I have kept notes in various proprietary formats.
