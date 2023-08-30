@@ -6,7 +6,27 @@
     <description>Recent content in Tags on SecLinux Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Aug 2023 22:41:54 -0400</lastBuildDate><atom:link href="https://seclinux.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Aug 2023 01:03:18 -0400</lastBuildDate><atom:link href="https://seclinux.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lab</title>
+      <link>https://seclinux.net/tags/lab/</link>
+      <pubDate>Wed, 30 Aug 2023 01:03:18 -0400</pubDate>
+      
+      <guid>https://seclinux.net/tags/lab/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>rig</title>
+      <link>https://seclinux.net/tags/rig/</link>
+      <pubDate>Wed, 30 Aug 2023 01:03:18 -0400</pubDate>
+      
+      <guid>https://seclinux.net/tags/rig/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
     <item>
       <title>first</title>
       <link>https://seclinux.net/tags/first/</link>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rig on SecLinux Blog</title>
+    <link>https://seclinux.net/tags/rig/</link>
+    <description>Recent content in rig on SecLinux Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Aug 2023 01:03:18 -0400</lastBuildDate><atom:link href="https://seclinux.net/tags/rig/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Rig</title>
+      <link>https://seclinux.net/posts/myrig/</link>
+      <pubDate>Wed, 30 Aug 2023 01:03:18 -0400</pubDate>
+      
+      <guid>https://seclinux.net/posts/myrig/</guid>
+      <description>Introduction I thought I would give a brief overview of my development/learning environment. Many of my wacky experiments are going to be done on a rig I built in 2022. In 2022, I was working as a cybersec consultant and decided to build a rig that would help me with what I was working on at the time. Mostly, I was going to be running many simultaneous VMs in complex topologies and running DDoS mitigation experiments on them.</description>
+      <content>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;I thought I would give a brief overview of my development/learning environment.  Many of my wacky experiments are going to be done on a rig I built in 2022. In 2022, I was working as a cybersec consultant and decided to build a rig that would help me with what I was working on at the time.  Mostly, I was going to be running many simultaneous VMs in complex topologies and running DDoS mitigation experiments on them.  I required a lot of memory and decent CPU.&lt;/p&gt;
+&lt;h2 id=&#34;the-hardware&#34;&gt;The Hardware&lt;/h2&gt;
+&lt;p&gt;I ordered the parts from many different places I will not be posting the BOM here I will be posting the inxi output of the machine.  The experiments done here can be done on any machine.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://seclinux.net/riginxi.png&#34; alt=&#34;my rig&amp;amp;rsquo;s inxi output&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;the-software&#34;&gt;The software&lt;/h2&gt;
+&lt;p&gt;I decided not to use the latest LTS but one that&amp;rsquo;s a bit older.  I do this for stability reasons and availability of documentation for bit older releases.  In the past I&amp;rsquo;ve used Debian as the distro of choice for my home servers or rigs but this time I wanted to use Ubuntu mate.  Ubuntu mate first became my favorite distro on laptop, then I eventually ended up using it on my home servers/rigs.  At work it&amp;rsquo;s a RedHat and so this blog will obviously contain RedHat content.&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
