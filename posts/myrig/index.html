@@ -118,9 +118,25 @@
 <p>I thought I would give a brief overview of my development/learning environment.  Many of my wacky experiments are going to be done on a rig I built in 2022. In 2022, I was working as a cybersec consultant and decided to build a rig that would help me with what I was working on at the time.  Mostly, I was going to be running many simultaneous VMs in complex topologies and running DDoS mitigation experiments on them.  I required a lot of memory and decent CPU.</p>
 <h2 id="the-hardware">The Hardware<a href="#the-hardware" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>I ordered the parts from many different places I will not be posting the BOM here I will be posting the inxi output of the machine.  The experiments done here can be done on any machine.</p>
-<p><img src="/riginxi.png" alt="my rig&amp;rsquo;s inxi output"></p>
-<h2 id="the-software">The software<a href="#the-software" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>I decided not to use the latest LTS but one that&rsquo;s a bit older.  I do this for stability reasons and availability of documentation for bit older releases.  In the past I&rsquo;ve used Debian as the distro of choice for my home servers or rigs but this time I wanted to use Ubuntu mate.  Ubuntu mate first became my favorite distro on laptop, then I eventually ended up using it on my home servers/rigs.  At work it&rsquo;s a RedHat and so this blog will obviously contain RedHat content.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>symtex@hypervisor:~$ sudo inxi -b
+</span></span><span style="display:flex;"><span>System:    Host: hypervisor.seclinux.net Kernel: 5.15.0-79-generic x86_64 bits: <span style="color:#ae81ff">64</span> Console: tty <span style="color:#ae81ff">1</span> 
+</span></span><span style="display:flex;"><span>           Distro: Ubuntu 20.04.6 LTS <span style="color:#f92672">(</span>Focal Fossa<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span>Machine:   Type: Desktop Mobo: ASUSTeK model: TUF GAMING X570-PLUS <span style="color:#f92672">(</span>WI-FI<span style="color:#f92672">)</span> v: Rev X.0x serial: <span style="color:#ae81ff">220299288203033</span> 
+</span></span><span style="display:flex;"><span>           BIOS: American Megatrends v: <span style="color:#ae81ff">4204</span> date: 02/25/2022 
+</span></span><span style="display:flex;"><span>CPU:       16-Core: AMD Ryzen <span style="color:#ae81ff">9</span> 5950X type: MT MCP speed: <span style="color:#ae81ff">2199</span> MHz min/max: 2200/3400 MHz 
+</span></span><span style="display:flex;"><span>Graphics:  Device-1: NVIDIA GK208B <span style="color:#f92672">[</span>GeForce GT 730<span style="color:#f92672">]</span> driver: nvidia v: 470.199.02 
+</span></span><span style="display:flex;"><span>           Display: server: X.org 1.20.13 driver: nvidia unloaded: fbdev,modesetting,nouveau,vesa tty: 140x34 
+</span></span><span style="display:flex;"><span>           Message: Advanced graphics data unavailable in console <span style="color:#66d9ef">for</span> root. 
+</span></span><span style="display:flex;"><span>Network:   Device-1: Intel Wireless-AC <span style="color:#ae81ff">9260</span> driver: iwlwifi 
+</span></span><span style="display:flex;"><span>           Device-2: Realtek RTL8111/8168/8411 PCI Express Gigabit Ethernet driver: r8169 
+</span></span><span style="display:flex;"><span>Drives:    Local Storage: total: 2.27 TiB used: 223.63 GiB <span style="color:#f92672">(</span>9.6%<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span>Info:      Processes: <span style="color:#ae81ff">428</span> Uptime: 1h 43m Memory: 125.70 GiB used: 1.04 GiB <span style="color:#f92672">(</span>0.8%<span style="color:#f92672">)</span> Init: systemd runlevel: <span style="color:#ae81ff">5</span> Shell: bash 
+</span></span><span style="display:flex;"><span>           inxi: 3.0.38 
+</span></span></code></pre></div><h2 id="the-software">The software<a href="#the-software" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>I decided not to use the latest LTS but one that&rsquo;s a bit older (Focal Fossa).  I do this for stability reasons and availability of documentation.  In the past, I&rsquo;ve used Debian as the distro of choice for my home servers or rigs but this time I wanted to use Ubuntu mate.  Ubuntu mate first became my favorite distro via laptop use, then I eventually ended up using it on my home servers/rigs.  At work it&rsquo;s a all about Red Hat and so this blog will obviously contain Red Hat content.</p>
+<h2 id="kvm-libvirt-and-ovs">KVM, libvirt, and OVS<a href="#kvm-libvirt-and-ovs" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>When it comes to spinning up the necessary environments I like to use Vanilla KVM/libvirt with OpenVSwitch.  I know there are higher level abstraction tools like vagrant, openstack heat, gns3, etc etc.  I prefer this setup because I feel I have manual control of all aspects of configuration this helps me at time of debugging.</p>
 
       </div></div>
 
