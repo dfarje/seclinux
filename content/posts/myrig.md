@@ -43,9 +43,11 @@ Info:      Processes: 428 Uptime: 1h 43m Memory: 125.70 GiB used: 1.04 GiB (0.8%
 
 ## The software
 
-I decided not to use the latest LTS but one that's a bit older (Focal Fossa).  I do this for stability reasons and availability of documentation.  In the past, I've used Debian as the distro of choice for my home servers or rigs but this time I wanted to use Ubuntu mate.  Ubuntu mate first became my favorite distro via laptop use, then I eventually ended up using it on my home servers/rigs.  At work it's a all Red Hat and so this blog will obviously contain Red Hat content.
+I decided Focal Fossa not the latest LTS.  I do this for stability reasons and availability of documentation.  In the past, I've used Debian as the distro of choice for my home servers or rigs but this time I wanted to use Ubuntu mate.  I decided to use Ubuntu mate because it provides a modern kernel to support modern hardware and modern graphics cards.  It also provides a lightweight yet functional user interface.  
+
+I connect to the rig via SSH and x2go if I need a graphical application that requires much memory/CPU (last time it was ghidra). 
 
 ## KVM, libvirt, and OVS
 
-When it comes to spinning up the necessary environments I like to use Vanilla KVM/libvirt with OpenVSwitch.  I know there are higher level abstraction tools like eve-ng, gns3, etc etc.  I prefer this setup because I feel I have manual control of all aspects of configuration this helps me at time of debugging.
+When it comes to spinning up the necessary environments I like to use Vanilla KVM/libvirt with OpenVSwitch.  I know there are higher level abstraction tools like eve-ng, gns3, openstack, etc etc.  I prefer this setup because I feel I have manual control of all aspects of virtualization this helps me at time of debugging.
 

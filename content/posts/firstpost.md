@@ -14,7 +14,7 @@ color = "" #color from the theme settings
 +++
 
 ## About this blog
-This is my first post.  I decided to start this blog as a way to publish the technical notes that I write down in markdown, I believe in open and simple text formats as a way to generate content that has more resilience against bit rot. I will be using hugo to compile the notes into HTML. 
+This is my first post.  I decided to start this blog to share my technical findinds and general thoughts on a wide range of topics. I'm hoping the technical content found on this page can perhaps help someone out there who is looking for answers. The topics discussed in this blog include the following:
 
 - FOSS 
 - Computer Science
@@ -25,8 +25,6 @@ This is my first post.  I decided to start this blog as a way to publish the tec
 - Retro Computing
 - Misc
 
-I'm mostly writing this blog to document my own learning process.  In the past I have kept notes in various proprietary formats which made it harder for me to switch to other note taking or documentation solutions.  If I'm lucky I will have the priviledge of educating someone out there who is looking for the information I post here.
-
 ## About me
-My name is David no fancy aliases just @symtex.  I work as a network and cybersecurity engineer with a background in coding.  I spent many years deploying/operating/automating/securing networks and datacenters for many customers in Latin America some in USA and Europe.  I've been tinkering with Linux and networking since I was 14 years old.  I'm 40 at the time of this writing so you know I have a few stories to tell.
+My name is David Farje. I've been tinkering with computers and Linux since I was a young boy. My first experience with computing was on a IBM/PC clone in 1988.  The operating system was MS-DOS.  My first experience coding was QBasic and Turbo C++.  Later I used Visual Basic 6.0.  then I discovered FOSS/UNIX/Linux ecosystem and Emacs/vim.  I fell in love and never turned back.  Today I consider myself a Linux/FOSS specialist among other things.
 
