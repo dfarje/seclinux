@@ -13,10 +13,10 @@
       <pubDate>Mon, 21 Aug 2023 22:41:54 -0400</pubDate>
       
       <guid>https://seclinux.net/posts/firstpost/</guid>
-      <description>About this blog This is my first post. I decided to start this blog as a way to publish the technical notes that I write down in markdown, I believe in open and simple text formats as a way to generate content that has more resilience against bit rot. I will be using hugo to compile the notes into HTML.
-FOSS Computer Science IP Networking Software Development MIS/DevOps CyberSecurity Retro Computing Misc I&amp;rsquo;m mostly writing this blog to document my own learning process.</description>
+      <description>About this blog This is my first post. I decided to start this blog to share my technical findinds and general thoughts on a wide range of topics. I&amp;rsquo;m hoping the technical content found on this page can perhaps help someone out there who is looking for answers. The topics discussed in this blog include the following:
+FOSS Computer Science IP Networking Software Development MIS/DevOps CyberSecurity Retro Computing Misc About me My name is David Farje.</description>
       <content>&lt;h2 id=&#34;about-this-blog&#34;&gt;About this blog&lt;/h2&gt;
-&lt;p&gt;This is my first post.  I decided to start this blog as a way to publish the technical notes that I write down in markdown, I believe in open and simple text formats as a way to generate content that has more resilience against bit rot. I will be using hugo to compile the notes into HTML.&lt;/p&gt;
+&lt;p&gt;This is my first post.  I decided to start this blog to share my technical findinds and general thoughts on a wide range of topics. I&amp;rsquo;m hoping the technical content found on this page can perhaps help someone out there who is looking for answers. The topics discussed in this blog include the following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;FOSS&lt;/li&gt;
 &lt;li&gt;Computer Science&lt;/li&gt;
@@ -27,9 +27,8 @@ FOSS Computer Science IP Networking Software Development MIS/DevOps CyberSecurit
 &lt;li&gt;Retro Computing&lt;/li&gt;
 &lt;li&gt;Misc&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;I&amp;rsquo;m mostly writing this blog to document my own learning process.  In the past I have kept notes in various proprietary formats which made it harder for me to switch to other note taking or documentation solutions.  If I&amp;rsquo;m lucky I will have the priviledge of educating someone out there who is looking for the information I post here.&lt;/p&gt;
 &lt;h2 id=&#34;about-me&#34;&gt;About me&lt;/h2&gt;
-&lt;p&gt;My name is David no fancy aliases just @symtex.  I work as a network and cybersecurity engineer with a background in coding.  I spent many years deploying/operating/automating/securing networks and datacenters for many customers in Latin America some in USA and Europe.  I&amp;rsquo;ve been tinkering with Linux and networking since I was 14 years old.  I&amp;rsquo;m 40 at the time of this writing so you know I have a few stories to tell.&lt;/p&gt;
+&lt;p&gt;My name is David Farje. I&amp;rsquo;ve been tinkering with computers and Linux since I was a young boy. My first experience with computing was on a IBM/PC clone in 1988.  The operating system was MS-DOS.  My first experience coding was QBasic and Turbo C++.  Later I used Visual Basic 6.0.  then I discovered FOSS/UNIX/Linux ecosystem and Emacs/vim.  I fell in love and never turned back.  Today I consider myself a Linux/FOSS specialist among other things.&lt;/p&gt;
 </content>
     </item>
     

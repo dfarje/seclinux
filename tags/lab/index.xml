@@ -34,9 +34,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Info:      Processes: &lt;span style=&#34;color:#ae81ff&#34;&gt;428&lt;/span&gt; Uptime: 1h 43m Memory: 125.70 GiB used: 1.04 GiB &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;0.8%&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; Init: systemd runlevel: &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt; Shell: bash 
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           inxi: 3.0.38 
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;the-software&#34;&gt;The software&lt;/h2&gt;
-&lt;p&gt;I decided not to use the latest LTS but one that&amp;rsquo;s a bit older (Focal Fossa).  I do this for stability reasons and availability of documentation.  In the past, I&amp;rsquo;ve used Debian as the distro of choice for my home servers or rigs but this time I wanted to use Ubuntu mate.  Ubuntu mate first became my favorite distro via laptop use, then I eventually ended up using it on my home servers/rigs.  At work it&amp;rsquo;s a all Red Hat and so this blog will obviously contain Red Hat content.&lt;/p&gt;
+&lt;p&gt;I decided Focal Fossa not the latest LTS.  I do this for stability reasons and availability of documentation.  In the past, I&amp;rsquo;ve used Debian as the distro of choice for my home servers or rigs but this time I wanted to use Ubuntu mate.  I decided to use Ubuntu mate because it provides a modern kernel to support modern hardware and modern graphics cards.  It also provides a lightweight yet functional user interface.&lt;/p&gt;
+&lt;p&gt;I connect to the rig via SSH and x2go if I need a graphical application that requires much memory/CPU (last time it was ghidra).&lt;/p&gt;
 &lt;h2 id=&#34;kvm-libvirt-and-ovs&#34;&gt;KVM, libvirt, and OVS&lt;/h2&gt;
-&lt;p&gt;When it comes to spinning up the necessary environments I like to use Vanilla KVM/libvirt with OpenVSwitch.  I know there are higher level abstraction tools like eve-ng, gns3, etc etc.  I prefer this setup because I feel I have manual control of all aspects of configuration this helps me at time of debugging.&lt;/p&gt;
+&lt;p&gt;When it comes to spinning up the necessary environments I like to use Vanilla KVM/libvirt with OpenVSwitch.  I know there are higher level abstraction tools like eve-ng, gns3, openstack, etc etc.  I prefer this setup because I feel I have manual control of all aspects of virtualization this helps me at time of debugging.&lt;/p&gt;
 </content>
     </item>
     
