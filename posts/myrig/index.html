@@ -122,7 +122,7 @@
 </span></span><span style="display:flex;"><span>symtex@hypervisor:~$ sudo inxi -b
 </span></span><span style="display:flex;"><span>System:    Host: hypervisor.seclinux.net Kernel: 5.15.0-79-generic x86_64 bits: <span style="color:#ae81ff">64</span> Console: tty <span style="color:#ae81ff">1</span> 
 </span></span><span style="display:flex;"><span>           Distro: Ubuntu 20.04.6 LTS <span style="color:#f92672">(</span>Focal Fossa<span style="color:#f92672">)</span> 
-</span></span><span style="display:flex;"><span>Machine:   Type: Desktop Mobo: ASUSTeK model: TUF GAMING X570-PLUS <span style="color:#f92672">(</span>WI-FI<span style="color:#f92672">)</span> v: Rev X.0x serial: <span style="color:#ae81ff">220299288203033</span> 
+</span></span><span style="display:flex;"><span>Machine:   Type: Desktop Mobo: ASUSTeK model: TUF GAMING X570-PLUS <span style="color:#f92672">(</span>WI-FI<span style="color:#f92672">)</span> v: Rev X.0x serial: xxxxxxxxxxxxxxx 
 </span></span><span style="display:flex;"><span>           BIOS: American Megatrends v: <span style="color:#ae81ff">4204</span> date: 02/25/2022 
 </span></span><span style="display:flex;"><span>CPU:       16-Core: AMD Ryzen <span style="color:#ae81ff">9</span> 5950X type: MT MCP speed: <span style="color:#ae81ff">2199</span> MHz min/max: 2200/3400 MHz 
 </span></span><span style="display:flex;"><span>Graphics:  Device-1: NVIDIA GK208B <span style="color:#f92672">[</span>GeForce GT 730<span style="color:#f92672">]</span> driver: nvidia v: 470.199.02 
@@ -134,9 +134,9 @@
 </span></span><span style="display:flex;"><span>Info:      Processes: <span style="color:#ae81ff">428</span> Uptime: 1h 43m Memory: 125.70 GiB used: 1.04 GiB <span style="color:#f92672">(</span>0.8%<span style="color:#f92672">)</span> Init: systemd runlevel: <span style="color:#ae81ff">5</span> Shell: bash 
 </span></span><span style="display:flex;"><span>           inxi: 3.0.38 
 </span></span></code></pre></div><h2 id="the-software">The software<a href="#the-software" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>I decided not to use the latest LTS but one that&rsquo;s a bit older (Focal Fossa).  I do this for stability reasons and availability of documentation.  In the past, I&rsquo;ve used Debian as the distro of choice for my home servers or rigs but this time I wanted to use Ubuntu mate.  Ubuntu mate first became my favorite distro via laptop use, then I eventually ended up using it on my home servers/rigs.  At work it&rsquo;s a all about Red Hat and so this blog will obviously contain Red Hat content.</p>
+<p>I decided not to use the latest LTS but one that&rsquo;s a bit older (Focal Fossa).  I do this for stability reasons and availability of documentation.  In the past, I&rsquo;ve used Debian as the distro of choice for my home servers or rigs but this time I wanted to use Ubuntu mate.  Ubuntu mate first became my favorite distro via laptop use, then I eventually ended up using it on my home servers/rigs.  At work it&rsquo;s a all Red Hat and so this blog will obviously contain Red Hat content.</p>
 <h2 id="kvm-libvirt-and-ovs">KVM, libvirt, and OVS<a href="#kvm-libvirt-and-ovs" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>When it comes to spinning up the necessary environments I like to use Vanilla KVM/libvirt with OpenVSwitch.  I know there are higher level abstraction tools like vagrant, openstack heat, gns3, etc etc.  I prefer this setup because I feel I have manual control of all aspects of configuration this helps me at time of debugging.</p>
+<p>When it comes to spinning up the necessary environments I like to use Vanilla KVM/libvirt with OpenVSwitch.  I know there are higher level abstraction tools like eve-ng, gns3, etc etc.  I prefer this setup because I feel I have manual control of all aspects of configuration this helps me at time of debugging.</p>
 
       </div></div>
 
@@ -155,7 +155,7 @@
   <div class="footer__inner">
     
       <div class="copyright">
-        <span>© 2023 Powered by <a href="https://gohugo.io">Hugo</a></span>
+        <span>© 2024 Powered by <a href="https://gohugo.io">Hugo</a></span>
     
       <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
       </div>
