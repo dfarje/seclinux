@@ -6,7 +6,7 @@ authorTwitter = "" #do not include @
 cover = ""
 tags = ["rig", "lab"]
 keywords = ["rig", "amd", "ryzen"]
-description = "introduction to my rig is my development enviroment"
+description = "introduction to my rig/development enviroment"
 showFullContent = false
 readingTime = false
 hideComments = false
@@ -15,7 +15,7 @@ color = "" #color from the theme settings
 
 ## Introduction
 
-I thought I would give a brief overview of my development/learning environment.  Many of my wacky experiments are going to be done on a rig I built in 2022. In 2022, I was working as a cybersec consultant and decided to build a rig that would help me with what I was working on at the time.  Mostly, I was going to be running many simultaneous VMs in complex topologies and running DDoS mitigation experiments on them.  I required a lot of memory and decent CPU.
+I thought I would give a brief overview of my development/learning environment.  Many of my wacky experiments are going to be done on a rig I built in 2022. In 2022, I was working as a cybersec consultant and decided to build a rig that would help me with what I was working on at the time.  Mostly, I was going to be running many simultaneous VMs in complex topologies and running DDoS mitigation experiments on them.  I required a lot of memory and decent CPU, GPU was not a priority at the time so I didn't get an expensive GPU.
 
 
 ## The Hardware
@@ -43,7 +43,7 @@ Info:      Processes: 428 Uptime: 1h 43m Memory: 125.70 GiB used: 1.04 GiB (0.8%
 
 ## The software
 
-I decided Focal Fossa not the latest LTS.  I do this for stability reasons and availability of documentation.  In the past, I've used Debian as the distro of choice for my home servers or rigs but this time I wanted to use Ubuntu mate.  I decided to use Ubuntu mate because it provides a modern kernel to support modern hardware and modern graphics cards.  It also provides a lightweight yet functional user interface.  
+I decided to use Ubuntu 20.04 Focal Fossa not the latest LTS 22.04.  I do this for stability reasons and availability of documentation.  In the past, I've used Debian as the distro of choice for my home servers/rigs but this time I wanted to use Ubuntu mate.  I decided to use Ubuntu mate because it provides a modern kernel to support modern hardware and modern graphics cards.  Ubuntu mate also has a great looking classic UI that I've gotten comfortable with.
 
 I connect to the rig via SSH and x2go if I need a graphical application that requires much memory/CPU (last time it was ghidra). 
 
