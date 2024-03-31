@@ -33,7 +33,10 @@ The dependecies are the following
 These dependencies are required when compiling Bind the following way
 
 ```shell
-./configure --prefix=/opt/bind9 --enable-developer --enable-warn-error --enable-dnstap --enable-singletrace --enable-querytrace --enable-full-report --with-lmdb --with-libxml2 --with-json-c --disable-fips-mode --with-libnghttp2  --enable-fixed-rrset
+
+$ ./configure --prefix=/opt/bind9 --enable-developer --enable-warn-error --enable-dnstap --enable-singletrace --enable-querytrace --enable-full-report --with-lmdb --with-libxml2 --with-json-c --disable-fips-mode --with-libnghttp2  --enable-fixed-rrset
+
 ```
 
+## Installing libuv
 
