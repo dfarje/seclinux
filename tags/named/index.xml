@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>named on SecLinux Blog</title>
+    <link>https://seclinux.net/tags/named/</link>
+    <description>Recent content in named on SecLinux Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 31 Mar 2024 19:30:20 +0000</lastBuildDate><atom:link href="https://seclinux.net/tags/named/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bindcompilation</title>
+      <link>https://seclinux.net/posts/bindcompilation/</link>
+      <pubDate>Sun, 31 Mar 2024 19:30:20 +0000</pubDate>
+      
+      <guid>https://seclinux.net/posts/bindcompilation/</guid>
+      <description>Bind Stable Compilation In this article I will document the process of compiling ISC Bind 9.18.21 from source on a Rocky Linux 8 minimal install host.
+In order to compile Bind 9.18.21 on Rocky Linux minimal install host you must first install many dependencies. You must first install a C compiler and the gnu autotools. The rest of the dependencies may be installed from Rocky package repository but some must be installed and compiled from source.</description>
+      <content>&lt;h1 id=&#34;bind-stable-compilation&#34;&gt;Bind Stable Compilation&lt;/h1&gt;
+&lt;p&gt;In this article I will document the process of compiling ISC Bind 9.18.21 from source on a Rocky Linux 8 minimal install host.&lt;/p&gt;
+&lt;p&gt;In order to compile Bind 9.18.21 on Rocky Linux minimal install host you must first install many dependencies.  You must first install a C compiler and the gnu autotools.  The rest of the dependencies may be installed from Rocky package repository but some must be installed and compiled from source.&lt;/p&gt;
+&lt;p&gt;The dependecies are the following&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;libuv&lt;/li&gt;
+&lt;li&gt;liburcu&lt;/li&gt;
+&lt;li&gt;libxml2&lt;/li&gt;
+&lt;li&gt;libnghttp2&lt;/li&gt;
+&lt;li&gt;json-c&lt;/li&gt;
+&lt;li&gt;lmdb&lt;/li&gt;
+&lt;li&gt;protobuf-c&lt;/li&gt;
+&lt;li&gt;fstrm-devel&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These dependencies are required when compiling Bind the following way&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./configure --prefix&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/opt/bind9 --enable-developer --enable-warn-error --enable-dnstap --enable-singletrace --enable-querytrace --enable-full-report --with-lmdb --with-libxml2 --with-json-c --disable-fips-mode --with-libnghttp2  --enable-fixed-rrset
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+  </channel>
+</rss>
