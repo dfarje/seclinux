@@ -30,8 +30,10 @@ In order to compile Bind 9.18.21 on Rocky Linux minimal install host you must fi
 &lt;li&gt;fstrm-devel&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;These dependencies are required when compiling Bind the following way&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./configure --prefix&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/opt/bind9 --enable-developer --enable-warn-error --enable-dnstap --enable-singletrace --enable-querytrace --enable-full-report --with-lmdb --with-libxml2 --with-json-c --disable-fips-mode --with-libnghttp2  --enable-fixed-rrset
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ./configure --prefix&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/opt/bind9 --enable-developer --enable-warn-error --enable-dnstap --enable-singletrace --enable-querytrace --enable-full-report --with-lmdb --with-libxml2 --with-json-c --disable-fips-mode --with-libnghttp2  --enable-fixed-rrset
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;installing-libuv&#34;&gt;Installing libuv&lt;/h2&gt;
+</content>
     </item>
     
   </channel>
