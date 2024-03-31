@@ -6,7 +6,7 @@ authorTwitter = "" #do not include @
 cover = ""
 tags = ["first", "introduction"]
 keywords = ["first", "introduction"]
-description = "In this article I introduce the blog and myself"
+description = "In this article I introduce the blog and myself.  I discuss blog topics and personal history"
 showFullContent = false
 readingTime = false
 hideComments = false
@@ -14,6 +14,7 @@ color = "" #color from the theme settings
 +++
 
 ## About this blog
+
 This is my first post.  I decided to start this blog to share my technical findinds and general thoughts on a wide range of topics. I'm hoping the technical content found on this page can perhaps help someone out there who is looking for answers. The topics discussed in this blog include the following:
 
 - FOSS 
