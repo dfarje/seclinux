@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>compilation on SecLinux Blog</title>
-    <link>https://dfarje.github.io/tags/compilation/</link>
+    <link>https://dfarje.github.io/seclinux/tags/compilation/</link>
     <description>Recent content in compilation on SecLinux Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Mar 2024 19:30:20 +0000</lastBuildDate><atom:link href="https://dfarje.github.io/tags/compilation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Mar 2024 19:30:20 +0000</lastBuildDate><atom:link href="https://dfarje.github.io/seclinux/tags/compilation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bindcompilation</title>
-      <link>https://dfarje.github.io/posts/bindcompilation/</link>
+      <link>https://dfarje.github.io/seclinux/posts/bindcompilation/</link>
       <pubDate>Sun, 31 Mar 2024 19:30:20 +0000</pubDate>
       
-      <guid>https://dfarje.github.io/posts/bindcompilation/</guid>
+      <guid>https://dfarje.github.io/seclinux/posts/bindcompilation/</guid>
       <description>Bind New Stable Compilation In this article I will document the process of compiling the new stable ISC BIND 9.20.01 from source on a Rocky Linux 8 minimal install host.
 In order to compile BIND 9.20.01 on Rocky Linux minimal you must first install a C compiler and make.
 The following dependencies must be installed.

@@ -2,77 +2,77 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on SecLinux Blog</title>
-    <link>https://dfarje.github.io/tags/</link>
+    <link>https://dfarje.github.io/seclinux/tags/</link>
     <description>Recent content in Tags on SecLinux Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Mar 2024 19:30:20 +0000</lastBuildDate><atom:link href="https://dfarje.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Mar 2024 19:30:20 +0000</lastBuildDate><atom:link href="https://dfarje.github.io/seclinux/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>bind</title>
-      <link>https://dfarje.github.io/tags/bind/</link>
+      <link>https://dfarje.github.io/seclinux/tags/bind/</link>
       <pubDate>Sun, 31 Mar 2024 19:30:20 +0000</pubDate>
       
-      <guid>https://dfarje.github.io/tags/bind/</guid>
+      <guid>https://dfarje.github.io/seclinux/tags/bind/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>compilation</title>
-      <link>https://dfarje.github.io/tags/compilation/</link>
+      <link>https://dfarje.github.io/seclinux/tags/compilation/</link>
       <pubDate>Sun, 31 Mar 2024 19:30:20 +0000</pubDate>
       
-      <guid>https://dfarje.github.io/tags/compilation/</guid>
+      <guid>https://dfarje.github.io/seclinux/tags/compilation/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>named</title>
-      <link>https://dfarje.github.io/tags/named/</link>
+      <link>https://dfarje.github.io/seclinux/tags/named/</link>
       <pubDate>Sun, 31 Mar 2024 19:30:20 +0000</pubDate>
       
-      <guid>https://dfarje.github.io/tags/named/</guid>
+      <guid>https://dfarje.github.io/seclinux/tags/named/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>lab</title>
-      <link>https://dfarje.github.io/tags/lab/</link>
+      <link>https://dfarje.github.io/seclinux/tags/lab/</link>
       <pubDate>Wed, 30 Aug 2023 01:03:18 -0400</pubDate>
       
-      <guid>https://dfarje.github.io/tags/lab/</guid>
+      <guid>https://dfarje.github.io/seclinux/tags/lab/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>rig</title>
-      <link>https://dfarje.github.io/tags/rig/</link>
+      <link>https://dfarje.github.io/seclinux/tags/rig/</link>
       <pubDate>Wed, 30 Aug 2023 01:03:18 -0400</pubDate>
       
-      <guid>https://dfarje.github.io/tags/rig/</guid>
+      <guid>https://dfarje.github.io/seclinux/tags/rig/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>first</title>
-      <link>https://dfarje.github.io/tags/first/</link>
+      <link>https://dfarje.github.io/seclinux/tags/first/</link>
       <pubDate>Mon, 21 Aug 2023 22:41:54 -0400</pubDate>
       
-      <guid>https://dfarje.github.io/tags/first/</guid>
+      <guid>https://dfarje.github.io/seclinux/tags/first/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>introduction</title>
-      <link>https://dfarje.github.io/tags/introduction/</link>
+      <link>https://dfarje.github.io/seclinux/tags/introduction/</link>
       <pubDate>Mon, 21 Aug 2023 22:41:54 -0400</pubDate>
       
-      <guid>https://dfarje.github.io/tags/introduction/</guid>
+      <guid>https://dfarje.github.io/seclinux/tags/introduction/</guid>
       <description></description>
       <content></content>
     </item>

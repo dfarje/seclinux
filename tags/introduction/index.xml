@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>introduction on SecLinux Blog</title>
-    <link>https://dfarje.github.io/tags/introduction/</link>
+    <link>https://dfarje.github.io/seclinux/tags/introduction/</link>
     <description>Recent content in introduction on SecLinux Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Aug 2023 22:41:54 -0400</lastBuildDate><atom:link href="https://dfarje.github.io/tags/introduction/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Aug 2023 22:41:54 -0400</lastBuildDate><atom:link href="https://dfarje.github.io/seclinux/tags/introduction/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Firstpost</title>
-      <link>https://dfarje.github.io/posts/firstpost/</link>
+      <link>https://dfarje.github.io/seclinux/posts/firstpost/</link>
       <pubDate>Mon, 21 Aug 2023 22:41:54 -0400</pubDate>
       
-      <guid>https://dfarje.github.io/posts/firstpost/</guid>
+      <guid>https://dfarje.github.io/seclinux/posts/firstpost/</guid>
       <description>About this blog This is my first post. I decided to start this blog to share my technical findinds and general thoughts on a wide range of topics. I&amp;rsquo;m hoping the technical content found on this page can perhaps help someone out there who is looking for answers. The topics discussed in this blog include the following:
 FOSS Computer Science IP Networking Software Development MIS/DevOps CyberSecurity Retro Computing Misc About me My name is David Farje.</description>
       <content>&lt;h2 id=&#34;about-this-blog&#34;&gt;About this blog&lt;/h2&gt;
