@@ -13,27 +13,95 @@
       <pubDate>Sun, 31 Mar 2024 19:30:20 +0000</pubDate>
       
       <guid>https://seclinux.net/posts/bindcompilation/</guid>
-      <description>Bind Stable Compilation In this article I will document the process of compiling ISC Bind 9.18.21 from source on a Rocky Linux 8 minimal install host.
-In order to compile Bind 9.18.21 on Rocky Linux minimal install host you must first install many dependencies. You must first install a C compiler and the gnu autotools. The rest of the dependencies may be installed from Rocky package repository but some must be installed and compiled from source.</description>
-      <content>&lt;h1 id=&#34;bind-stable-compilation&#34;&gt;Bind Stable Compilation&lt;/h1&gt;
-&lt;p&gt;In this article I will document the process of compiling ISC Bind 9.18.21 from source on a Rocky Linux 8 minimal install host.&lt;/p&gt;
-&lt;p&gt;In order to compile Bind 9.18.21 on Rocky Linux minimal install host you must first install many dependencies.  You must first install a C compiler and the gnu autotools.  The rest of the dependencies may be installed from Rocky package repository but some must be installed and compiled from source.&lt;/p&gt;
-&lt;p&gt;The dependecies are the following&lt;/p&gt;
+      <description>Bind New Stable Compilation In this article I will document the process of compiling the new stable ISC BIND 9.20.01 from source on a Rocky Linux 8 minimal install host.
+In order to compile BIND 9.20.01 on Rocky Linux minimal you must first install a C compiler and make.
+The following dependencies must be installed.
+libuv (Async I/O) libcap (capabilities) liburcu (Userspace RCU for concurrency) jemalloc (Efficient memory allocator from FreeBSD project) libxml2 (XML Stats Channel) libnghttp2 (To support DoH) json-c (JSON stat interface) lmdb (in memory datastore) protobuf-c (to support DNSTAP) fstrm-devel (to support DNSTAP) cmocka (for unit testing) Most of these libraries may be installed using package manager.</description>
+      <content>&lt;h1 id=&#34;bind-new-stable-compilation&#34;&gt;Bind New Stable Compilation&lt;/h1&gt;
+&lt;p&gt;In this article I will document the process of compiling the new stable ISC BIND 9.20.01 from source on a Rocky Linux 8 minimal install host.&lt;/p&gt;
+&lt;p&gt;In order to compile BIND 9.20.01 on Rocky Linux minimal you must first install a C compiler and make.&lt;/p&gt;
+&lt;p&gt;The following dependencies must be installed.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;libuv&lt;/li&gt;
-&lt;li&gt;liburcu&lt;/li&gt;
-&lt;li&gt;libxml2&lt;/li&gt;
-&lt;li&gt;libnghttp2&lt;/li&gt;
-&lt;li&gt;json-c&lt;/li&gt;
-&lt;li&gt;lmdb&lt;/li&gt;
-&lt;li&gt;protobuf-c&lt;/li&gt;
-&lt;li&gt;fstrm-devel&lt;/li&gt;
+&lt;li&gt;libuv (Async I/O)&lt;/li&gt;
+&lt;li&gt;libcap (capabilities)&lt;/li&gt;
+&lt;li&gt;liburcu (Userspace RCU for concurrency)&lt;/li&gt;
+&lt;li&gt;jemalloc (Efficient memory allocator from FreeBSD project)&lt;/li&gt;
+&lt;li&gt;libxml2 (XML Stats Channel)&lt;/li&gt;
+&lt;li&gt;libnghttp2 (To support DoH)&lt;/li&gt;
+&lt;li&gt;json-c (JSON stat interface)&lt;/li&gt;
+&lt;li&gt;lmdb (in memory datastore)&lt;/li&gt;
+&lt;li&gt;protobuf-c (to support DNSTAP)&lt;/li&gt;
+&lt;li&gt;fstrm-devel (to support DNSTAP)&lt;/li&gt;
+&lt;li&gt;cmocka  (for unit testing)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;These dependencies are required when compiling Bind the following way&lt;/p&gt;
+&lt;p&gt;Most of these libraries may be installed using package manager.  Some of these may need to be compiled from source.&lt;/p&gt;
+&lt;h4 id=&#34;1-get-bind-source-code&#34;&gt;1. Get BIND source code&lt;/h4&gt;
+&lt;p&gt;To get the new stable BIND source code&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl https://downloads.isc.org/isc/bind9/9.20.1/bind-9.20.1.tar.xz -o bind-9.20.1.tar.xz
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;2-install-gcc-and-gnuautotools&#34;&gt;2. Install gcc and GNU/Autotools&lt;/h4&gt;
+&lt;p&gt;To install the GCC compiler and GNU/Autotools is possible to install each utility one by one.  However it will be tedius and error/time prone.  To install these dependencies install development package group for Redhat.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ./configure --prefix&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/opt/bind9 --enable-developer --enable-warn-error --enable-dnstap --enable-singletrace --enable-querytrace --enable-full-report --with-lmdb --with-libxml2 --with-json-c --disable-fips-mode --with-libnghttp2  --enable-fixed-rrset
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;installing-libuv&#34;&gt;Installing libuv&lt;/h2&gt;
-</content>
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo dnf -y install gcc gcc-c++ make bzip2 tar perl
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;3-enable-devel-repo-and-epel-repo&#34;&gt;3. Enable devel repo and epel repo&lt;/h4&gt;
+&lt;p&gt;To compile BIND you will need many devel packages.  To install these packages you will need access to the devel repo.
+To enable devel repo&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo dnf config-manager --enable devel
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo dnf -y install epel-release
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;4-installing-liburcu&#34;&gt;4. Installing liburcu&lt;/h4&gt;
+&lt;p&gt;The liburcu library provides RCU functionality in user space.  RCU is used by BIND to achieve thread concurrency.  RCU functionality is implemented in the Linux kernel but bind uses a user space implementation.&lt;/p&gt;
+&lt;p&gt;If you want to learn more about RCU check this link:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://lwn.net/Articles/262464/&#34;&gt;What is RCU, Fundamentally?&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To install librcu on Rocky 8 for the purposes of compiling BIND you will have to download and install from source.&lt;/p&gt;
+&lt;p&gt;Install URCU development files&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo dnf -y install userspace-rcu-devel
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;5-installing-libuv&#34;&gt;5. Installing libuv&lt;/h4&gt;
+&lt;p&gt;The libuv library is very important in Bind since it provides the Async I/O capabilities that enable it to answer queries in parallel.&lt;/p&gt;
+&lt;p&gt;To install the libuv library in Rocky Linux 8 you can use packages or from source.&lt;/p&gt;
+&lt;p&gt;To install package&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo dnf -y install libuv-devel
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;6-install-libnghttp2&#34;&gt;6. Install libnghttp2&lt;/h4&gt;
+&lt;p&gt;In order to support DoH, BIND will require development files from libnghttp2&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo dnf -y install libnghttp2-devel
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;7-install-openssl-libraries&#34;&gt;7. Install OpenSSL libraries&lt;/h4&gt;
+&lt;p&gt;In order for BIND to support SSL you must install SSL library development files.
+The following package will provide them.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo dnf -y install openssl-devel
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;8-install-lmdb-libraries&#34;&gt;8. Install LMDB libraries&lt;/h4&gt;
+&lt;p&gt;LMDB provides a fast in memory database for BIND to use. To use this library you must
+install the following package.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo dnf -y install lmdb-devel
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;9-install-libxml2-libraries&#34;&gt;9. Install libxml2 libraries&lt;/h4&gt;
+&lt;p&gt;BIND is able to send statistics channel via XML.  To do this it requires libxml2 libraries.
+You may install libxml2 libraries on Rocky 8 as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo dnf -y install libxml2-devel
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;10-install-json-c-libraries&#34;&gt;10. Install json-c libraries&lt;/h4&gt;
+&lt;p&gt;BIND is also able to provide statistics via JSON format.  It will require the json-c libraries.
+To install use the following command&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo dnf -y install json-c-devel
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;11-install-kernel-capabilities-library&#34;&gt;11. Install kernel capabilities library.&lt;/h4&gt;
+&lt;p&gt;BIND requests kernel capabilities in order to operate securely.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo dnf -y install libcap-devel
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;12-install-frame-streaming-library-fstrm-and-protobuf&#34;&gt;12. Install frame streaming library (fstrm) and protobuf&lt;/h4&gt;
+&lt;p&gt;BIND supports dnstap.  To support this it requires frame streaming library and google&amp;rsquo;s protocol buffers
+To install use the command.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo dnf -y install fstrm-devel protobuf-c-devel
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;13-install-cmocka-test-library&#34;&gt;13. Install cmocka test library&lt;/h4&gt;
+&lt;p&gt;To install cmocka mock testing library use the following&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo dnf -y install libcmocka-devel
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;14-install-jemalloc-memory-allocator&#34;&gt;14. Install jemalloc memory allocator&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo dnf -y install jemalloc-devel
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;14-compile-bind&#34;&gt;14. Compile BIND&lt;/h4&gt;
+&lt;p&gt;First untar source package.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tar Jxvf bind-9.20.1.tar.xz
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Enter the project directory&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd bind-9.20.1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For testing purposes I will be configuring the build as follows.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./configure --prefix&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/home/david/bind9201 --enable-developer --enable-warn-error --enable-dnstap --enable-singletrace --enable-querytrace --enable-full-report --with-lmdb --with-libxml2 --with-json-c --disable-fips-mode --with-libnghttp2  --enable-fixed-rrset --with-jemalloc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then make.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;make
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Finally install it&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;make install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
     </item>
     
     <item>
