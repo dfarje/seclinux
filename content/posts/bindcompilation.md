@@ -45,7 +45,8 @@ curl https://downloads.isc.org/isc/bind9/9.20.1/bind-9.20.1.tar.xz -o bind-9.20.
 
 #### 2. Install gcc and GNU/Autotools
 
-To install the GCC compiler and GNU/Autotools is possible to install each utility one by one.  However it will be tedius and error/time prone.  To install these dependencies install development package group for Redhat.
+You will need a C compiler, make and perl
+
 
 ```shell
 
