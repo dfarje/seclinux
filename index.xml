@@ -15,12 +15,12 @@
       <guid>https://dfarje.github.io/seclinux/posts/bindcompilation/</guid>
       <description>Bind New Stable Compilation In this article I will document the process of compiling the new stable ISC BIND 9.20.01 from source on a Rocky Linux 8 minimal install host.
 In order to compile BIND 9.20.01 on Rocky Linux minimal you must first install a C compiler and make.
-The following dependencies must be installed.
-libuv (Async I/O) libcap (capabilities) liburcu (Userspace RCU for concurrency) jemalloc (Efficient memory allocator from FreeBSD project) libxml2 (XML Stats Channel) libnghttp2 (To support DoH) json-c (JSON stat interface) lmdb (in memory datastore) protobuf-c (to support DNSTAP) fstrm-devel (to support DNSTAP) cmocka (for unit testing) Most of these libraries may be installed using package manager.</description>
+The following dependencies must be also installed.
+libuv (Async I/O) libcap (capabilities) liburcu (Userspace RCU for concurrency) jemalloc (Efficient memory allocator from FreeBSD project) libxml2 (XML Stats Channel) libnghttp2 (To support DoH) json-c (JSON stat interface) lmdb (in memory datastore) protobuf-c (to support DNSTAP) fstrm-devel (to support DNSTAP) cmocka (for unit testing) 1.</description>
       <content>&lt;h1 id=&#34;bind-new-stable-compilation&#34;&gt;Bind New Stable Compilation&lt;/h1&gt;
 &lt;p&gt;In this article I will document the process of compiling the new stable ISC BIND 9.20.01 from source on a Rocky Linux 8 minimal install host.&lt;/p&gt;
 &lt;p&gt;In order to compile BIND 9.20.01 on Rocky Linux minimal you must first install a C compiler and make.&lt;/p&gt;
-&lt;p&gt;The following dependencies must be installed.&lt;/p&gt;
+&lt;p&gt;The following dependencies must be also installed.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;libuv (Async I/O)&lt;/li&gt;
 &lt;li&gt;libcap (capabilities)&lt;/li&gt;
@@ -34,7 +34,6 @@ libuv (Async I/O) libcap (capabilities) liburcu (Userspace RCU for concurrency) 
 &lt;li&gt;fstrm-devel (to support DNSTAP)&lt;/li&gt;
 &lt;li&gt;cmocka  (for unit testing)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Most of these libraries may be installed using package manager.  Some of these may need to be compiled from source.&lt;/p&gt;
 &lt;h4 id=&#34;1-get-bind-source-code&#34;&gt;1. Get BIND source code&lt;/h4&gt;
 &lt;p&gt;To get the new stable BIND source code&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl https://downloads.isc.org/isc/bind9/9.20.1/bind-9.20.1.tar.xz -o bind-9.20.1.tar.xz

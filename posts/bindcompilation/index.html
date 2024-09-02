@@ -119,7 +119,7 @@
         <h1 id="bind-new-stable-compilation">Bind New Stable Compilation<a href="#bind-new-stable-compilation" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p>In this article I will document the process of compiling the new stable ISC BIND 9.20.01 from source on a Rocky Linux 8 minimal install host.</p>
 <p>In order to compile BIND 9.20.01 on Rocky Linux minimal you must first install a C compiler and make.</p>
-<p>The following dependencies must be installed.</p>
+<p>The following dependencies must be also installed.</p>
 <ul>
 <li>libuv (Async I/O)</li>
 <li>libcap (capabilities)</li>
@@ -133,7 +133,6 @@
 <li>fstrm-devel (to support DNSTAP)</li>
 <li>cmocka  (for unit testing)</li>
 </ul>
-<p>Most of these libraries may be installed using package manager.  Some of these may need to be compiled from source.</p>
 <h4 id="1-get-bind-source-code">1. Get BIND source code<a href="#1-get-bind-source-code" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <p>To get the new stable BIND source code</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>curl https://downloads.isc.org/isc/bind9/9.20.1/bind-9.20.1.tar.xz -o bind-9.20.1.tar.xz
