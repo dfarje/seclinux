@@ -19,7 +19,7 @@ In this article I will document the process of compiling the new stable ISC BIND
 
 In order to compile BIND 9.20.01 on Rocky Linux minimal you must first install a C compiler and make.
 
-The following dependencies must be installed.
+The following dependencies must be also installed.
 
 - libuv (Async I/O)
 - libcap (capabilities)
@@ -33,7 +33,6 @@ The following dependencies must be installed.
 - fstrm-devel (to support DNSTAP)
 - cmocka  (for unit testing)
 
-Most of these libraries may be installed using package manager.  Some of these may need to be compiled from source.
 
 
 #### 1. Get BIND source code
